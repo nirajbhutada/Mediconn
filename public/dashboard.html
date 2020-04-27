@@ -1,0 +1,920 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    
+	  <title>Mediconn</title>
+      <link rel="stylesheet" href="libs/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="css/styles.css" type="text/css"/> -->
+</head>
+
+<body>
+    <div id="mainContainer" class="main-container mobile-responsive">
+        <main class="main-content extra-large-centered container-extended"> 
+    <section id='admin-home' class='admin-container common-container hide '>
+        <aside id="left-panel" class="left-panel">
+            <nav class="navbar navbar-expand-sm navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Admin Panel</a>
+                    
+                </div>
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <ul class="nav navbar-nav tab-container">
+                        
+                        <h3 class="menu-title">Approvals</h3>
+                        <li class="nav-item active item-selected menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="pending-approval-tab" data-toggle="tab" href="#pending-approval" role="tab" aria-controls="pending-approval" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-clock-o"></i>Pending Approvals</a>
+                            
+                        </li>
+                        <li class="nav-item menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="approved-hospital-tab" data-toggle="tab" href="#approved-hospital" role="tab" aria-controls="approved-hospital" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-hospital-o"></i>Approved Hospital List</a>
+                            
+                        </li>
+                        <li class="nav-item menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="approved-retailer-tab" data-toggle="tab" href="#approved-retailer" role="tab" aria-controls="approved-retailer" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-th"></i>Approved Retailers List</a>
+                            
+                        </li>
+                        <h3 class="menu-title">Order History</h3>
+                        <li class="menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="admin-order-history-tab" data-toggle="tab" href="#admin-order-history" role="tab" aria-controls="admin-order-history" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-tasks"></i>View Orders</a>
+                            
+                        </li>
+                        
+                        
+                        <h3 class="menu-title">Help</h3>
+                        <li class="menu-item-has-children dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Contact Us</a>
+                            <ul class="sub-menu children dropdown-menu">
+                                <li><i class="menu-icon fa fa-envelope"></i><a href="page-login.html">Email Us</a></li>
+                                <li><i class="menu-icon fa fa-phone"></i><a href="page-register.html">Call Us</a>
+                                </li>
+                                
+                            </ul>
+                            
+                        </li>
+                        <li class="menu-item-has-children dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> <i class="menu-icon fa fa-lock"></i>Change Password</a>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+
+        <div id="right-panel" class="right-panel">
+
+            <header id="header" class="header">
+                <div class="header-menu">
+                    <div class="sub-header-menu">
+                        <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                        <div class="header-left">
+                            <button class="search-trigger"><i class="fa fa-search"></i></button>
+                            <div class="form-inline">
+                                <form class="search-form">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                        aria-label="Search">
+                                    <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                                </form>
+                            </div>
+                            <div class="dropdown for-notification">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="count bg-danger">3</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="notification">
+                                    <p class="red">You have 3 Notification</p>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-check"></i>
+                                        <p>Server #1 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-info"></i>
+                                        <p>Server #2 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-warning"></i>
+                                        <p>Server #3 overloaded.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class='user-name-heading'><h2 class='admin-user-name'></h2></div>
+                    <div class="right-header-menu">
+                        <div class="user-area dropdown float-right">
+                            
+                            <button  class="logout-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Logout  </span><i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                        
+                        </div>
+                        <div class="language-select dropdown" id="language-select">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="language" aria-haspopup="true"
+                                aria-expanded="true">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="language">
+                                <div class="dropdown-item">
+                                    <span class="flag-icon flag-icon-fr"></span>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-es"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-it"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="breadcrumbs">
+                <div class="col-sm-4">
+                    <div class="page-header float-left">
+                        <div class="page-title">
+                            <h1 class='common-dashboard-heading'>Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="page-header float-right">
+                        <div class="page-title">
+                            <ol class="breadcrumb text-right">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Table</a></li>
+                                <li class="active">Data table</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade active in" id="pending-approval" role="tabpanel" aria-labelledby="pending-approval-tab">
+                <div class="container">
+                <div class="table-wrapper">
+                    
+                    <table id='bootstrap-data-table' class="table table-striped table-bordered pending-approvals-table">
+                        <thead class='gradient'>
+                            <tr>
+                                <th>Name</th>
+                                <th>Last Name</th>
+                                <th>Organization Name</th>
+                                <th>Organization Address</th>
+                                <th>Organization Type</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+                </div>
+                
+                <div class="tab-pane fade" id="approved-hospital" role="tabpanel" aria-labelledby="approved-hospital-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='approved-hospital-table' class="table table-striped table-bordered approved-hospital-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Last Name</th>
+                                        <th>Organization Name</th>
+                                        <th>Organization Address</th>
+                                        <th>Organization Type</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>City</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                <div class="tab-pane fade" id="approved-retailer" role="tabpanel" aria-labelledby="approved-retailer-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='approved-retailer-table' class="table table-striped table-bordered approved-retailer-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Last Name</th>
+                                        <th>Organization Name</th>
+                                        <th>Organization Address</th>
+                                        <th>Organization Type</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>City</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                <div class="tab-pane fade" id="admin-order-history" role="tabpanel" aria-labelledby="admin-order-history-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='adminOrderHistoryTable' class="table table-striped table-bordered admin-order-history-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Last Name</th>
+                                        <th>Organization Name</th>
+                                        <th>Organization Address</th>
+                                        <th>Organization Type</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>City</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <section id='hospital-home' class='hospital-container common-container hide'>
+        <aside id="left-panel" class="left-panel">
+            <nav class="navbar navbar-expand-sm navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Hospital Panel</a>
+                    
+                </div>
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <ul class="nav navbar-nav tab-container">
+                        
+                        <h3 class="menu-title">Approvals</h3>
+                        <li class="nav-item active item-selected menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="retailer-list-tab" data-toggle="tab" href="#retailer-list" role="tab" aria-controls="retailer-list" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-table"></i>Retailer List</a>
+                            
+                        </li>
+                        <li class="nav-item menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle hospitals-ongoing-orders" id="ongoing-order-tab" data-toggle="tab" href="#ongoing-order" role="tab" aria-controls="ongoing-order" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-tasks"></i>Ongoing Orders</a>
+                            
+                        </li>
+                        <h3 class="menu-title">Order History</h3>
+                        <li class="menu-item-has-children dropdown">
+                            <a href="#hospital-order-history" class="nav-link dropdown-toggle hospitals-order-history" id="hospital-order-history-tab" data-toggle="tab" role="tab" aria-controls="hospital-order-history" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-list"></i>View My Orders</a>
+                            
+                        </li>
+                        
+                        
+                       
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+
+        <div id="right-panel" class="right-panel">
+
+            <header id="header" class="header">
+                <div class="header-menu">
+                    <div class="sub-header-menu">
+                        <a id="menuToggle" class="mymenutoggle menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                        <div class="header-left">
+                            <button class="search-trigger"><i class="fa fa-search"></i></button>
+                            <div class="form-inline">
+                                <form class="search-form">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                        aria-label="Search">
+                                    <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                                </form>
+                            </div>
+                            <div class="dropdown for-notification">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="count bg-danger">3</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="notification">
+                                    <p class="red">You have 3 Notification</p>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-check"></i>
+                                        <p>Server #1 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-info"></i>
+                                        <p>Server #2 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-warning"></i>
+                                        <p>Server #3 overloaded.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--<div class="dropdown for-message">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="message"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="ti-email"></i>
+                                    <span class="count bg-primary">4</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="message">
+                                    <p class="red">You have 4 Mails</p>
+                                    <a class="dropdown-item media" href="#">
+                                        <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>
+                                        <span class="message media-body">
+                                            <span class="name float-left">Jonathan Smith</span>
+                                            <span class="time float-right">Just now</span>
+                                            <p>Hello, this is an example msg</p>
+                                        </span>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>
+                                        <span class="message media-body">
+                                            <span class="name float-left">Jack Sanders</span>
+                                            <span class="time float-right">5 minutes ago</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        </span>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>
+                                        <span class="message media-body">
+                                            <span class="name float-left">Cheryl Wheeler</span>
+                                            <span class="time float-right">10 minutes ago</span>
+                                            <p>Hello, this is an example msg</p>
+                                        </span>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>
+                                        <span class="message media-body">
+                                            <span class="name float-left">Rachel Santos</span>
+                                            <span class="time float-right">15 minutes ago</span>
+                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            -->
+                            <div class="dropdown for-notification add-to-cart">
+                                <button class="btn btn-secondary dropdown-toggle view-cart" type="button" id="cartnotification"
+                                    >
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="count cart-count bg-danger">0</span>
+                                </button>
+                                <div id="viewCartDetails" class="modal">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                          <a href='#' class="viewCartClose">Close</a>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="loader hide"></div>
+                                            <table id='viewCartTable' class="table table-striped table-bordered retailer-table">
+                                                <thead class="gradient">
+                                                    <tr>
+                                                        <th>Retailer Name</th>
+                                                        <th>Inventry Name</th>
+                                                        <th>Price</th>
+                                                        <th>Ordered Quantity</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody></tbody>
+                                            </table>
+                                            <div>
+                                                <button class="place-order">Pleace Order</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                               <!-- <div class="dropdown-menu view-cart-container" aria-labelledby="notification">
+                                    <p class=""></p>
+                                    <table id="viewCartTable" class="table table-striped table-bordered view-cart-table-table">
+                                        <thead class="gradient">
+                                            <tr>
+                                                <th>Retailer Name</th>
+                                                <th>Inventry Name</th>
+                                                <th>Price</th>
+                                                <th>Ordered Quantity</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody><tr><td>Emcure Pharmaceuticals Limited                                                                      </td><td>Crocin</td><td>2</td><td>23</td><td><a data-id="47563ad5-9eb8-4ba2-bcdc-56d9b0c1e4eb" class="deleteinventoryfromcart" href="#" title="Delete">Remove</a></td></tr><tr><td>Kundan Distributors                                                                                 </td><td>Adulsa Syrup</td><td>100</td><td>70</td><td><a data-id="57199f9b-6faf-4ede-ad82-0ccc6c80012d" class="deleteinventoryfromcart" href="#" title="Delete">Remove</a></td></tr></tbody>
+                                    </table>
+                                    <div>
+                                        <button class="place-order-btn place-order">Pleace Order</button>
+                                    </div>
+                                </div>-->
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div class='user-name-heading'><h2 class='hospital-user-name'></h2></div>
+                    <div class="right-header-menu">
+                        <div class="user-area dropdown float-right">
+                            <button  class="logout-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Logout  </span><i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                        
+                        </div>
+                        <div class="language-select dropdown" id="language-select">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="language" aria-haspopup="true"
+                                aria-expanded="true">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="language">
+                                <div class="dropdown-item">
+                                    <span class="flag-icon flag-icon-fr"></span>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-es"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-it"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="breadcrumbs">
+                <div class="col-sm-4">
+                    <div class="page-header float-left">
+                        <div class="page-title">
+                            <h1 class='common-dashboard-heading'>Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="page-header float-right">
+                        <div class="page-title">
+                            <ol class="breadcrumb text-right">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Table</a></li>
+                                <li class="active">Data table</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade active in" id="retailer-list" role="tabpanel" aria-labelledby="retailer-list-tab">
+                <div class="container">
+                <div class="table-wrapper">
+                    
+                    <table id='approvedRetailerTable' class="table table-striped table-bordered pending-approvals-table">
+                        <thead class='gradient'>
+                            <tr>
+                                <th>Action</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Organization Name</th>
+                                <th>Organization Address</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>City</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                
+                        </tbody>
+                    </table>
+                    <div id="viewInventories" class="modal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                  <p class="retailer-name"></p>  
+                                  <a href="#" class="viewInventoriesClose">Close</a>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="loader hide"></div>
+                                    <table id="viewInventryTable" class="table table-striped table-bordered retailer-table" >
+                                        <thead class="gradient">
+                                            <tr>
+                                                <th>Inventry Name</th>
+                                                <th>Description</th>
+                                                <th>Available Quantity</th>
+                                                <th>Price</th>
+                                                <th>Order Quantity</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody><tr><td class="inventoryname">Crocin</td><td>Crocin Advance Tablet is used to temporarily relieve fever and mild to moderate pain such as muscle ache, headache, toothache, arthritis, and backache.</td><td class="inventoryQuantity">500</td><td class="price">2</td><td><input type="number" class="form-control orderQuantity" name="orderQuantity"></td><td><button data-inventoryid="47563ad5-9eb8-4ba2-bcdc-56d9b0c1e4eb" data-retailerid="f88e7df8-a355-4221-ab21-eb1682717bd1" class="addToCart" title="Order">Add to cart</button></td></tr></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                          </div>
+                </div>
+            </div> 
+                </div>
+                
+                <div class="tab-pane fade" id="ongoing-order" role="tabpanel" aria-labelledby="ongoing-order-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='ongoingOrdersTable' class="table table-striped table-bordered ongoing-orders-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Inventory Name</th>
+                                        <th>Retailer Name</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price</th>   
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                      </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="tab-pane fade" id="hospital-order-history" role="tabpanel" aria-labelledby="hospital-order-history-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='hospitalOrderHistory' class="table table-striped table-bordered ongoing-orders-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Inventory Name</th>
+                                        <th>Retailer Name</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+
+    <section id='retailer-home' class='retailer-container common-container hide '>
+        <aside id="left-panel" class="left-panel">
+            <nav class="navbar navbar-expand-sm navbar-default">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Retailer Panel</a>
+                    
+                </div>
+                <div id="main-menu" class="main-menu collapse navbar-collapse">
+                    <ul class="nav navbar-nav tab-container">
+                        
+                        <h3 class="menu-title">Approvals</h3>
+                        <li class="nav-item active item-selected menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle" id="retailer-list-tab" data-toggle="tab" href="#my-inventry-list" role="tab" aria-controls="my-inventry-list" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa  fa-table"></i>My Inventry List</a>
+                            
+                        </li>
+                        <li class="nav-item menu-item-has-children dropdown">
+                            <a class="nav-link dropdown-toggle retailers-upcoming-orders" id="upcoming-order-tab" data-toggle="tab" href="#upcoming-order" role="tab" aria-controls="upcoming-order" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-tasks"></i>Upcoming Orders</a>
+                            
+                        </li>
+                        <h3 class="menu-title">Order History</h3>
+                        <li class="menu-item-has-children dropdown">
+                            <a href="#retailer-order-history" class="nav-link dropdown-toggle retailers-order-history" id="retailer-order-history-tab" data-toggle="tab" role="tab" aria-controls="retailer-order-history" aria-selected="true" aria-expanded="true"> <i class="menu-icon fa fa-list"></i>View My Orders</a>
+                            
+                        </li>
+                        
+                        
+                       
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+
+        <div id="right-panel" class="right-panel">
+
+            <header id="header" class="header">
+                <div class="header-menu">
+                    <div class="sub-header-menu">
+                        <a id="menuToggle" class="mymenutoggle menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                        <div class="header-left">
+                            <button class="search-trigger"><i class="fa fa-search"></i></button>
+                            <div class="form-inline">
+                                <form class="search-form">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                        aria-label="Search">
+                                    <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                                </form>
+                            </div>
+                            <div class="dropdown for-notification">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="count bg-danger">3</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="notification">
+                                    <p class="red">You have 3 Notification</p>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-check"></i>
+                                        <p>Server #1 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-info"></i>
+                                        <p>Server #2 overloaded.</p>
+                                    </a>
+                                    <a class="dropdown-item media" href="#">
+                                        <i class="fa fa-warning"></i>
+                                        <p>Server #3 overloaded.</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--<div class="dropdown for-message">-->
+                            <!--    <button class="btn btn-secondary dropdown-toggle" type="button" id="message"-->
+                            <!--        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+                            <!--        <i class="ti-email"></i>-->
+                            <!--        <span class="count bg-primary">4</span>-->
+                            <!--    </button>-->
+                            <!--    <div class="dropdown-menu" aria-labelledby="message">-->
+                            <!--        <p class="red">You have 4 Mails</p>-->
+                            <!--        <a class="dropdown-item media" href="#">-->
+                            <!--            <span class="photo media-left"><img alt="avatar" src="images/avatar/1.jpg"></span>-->
+                            <!--            <span class="message media-body">-->
+                            <!--                <span class="name float-left">Jonathan Smith</span>-->
+                            <!--                <span class="time float-right">Just now</span>-->
+                            <!--                <p>Hello, this is an example msg</p>-->
+                            <!--            </span>-->
+                            <!--        </a>-->
+                            <!--        <a class="dropdown-item media" href="#">-->
+                            <!--            <span class="photo media-left"><img alt="avatar" src="images/avatar/2.jpg"></span>-->
+                            <!--            <span class="message media-body">-->
+                            <!--                <span class="name float-left">Jack Sanders</span>-->
+                            <!--                <span class="time float-right">5 minutes ago</span>-->
+                            <!--                <p>Lorem ipsum dolor sit amet, consectetur</p>-->
+                            <!--            </span>-->
+                            <!--        </a>-->
+                            <!--        <a class="dropdown-item media" href="#">-->
+                            <!--            <span class="photo media-left"><img alt="avatar" src="images/avatar/3.jpg"></span>-->
+                            <!--            <span class="message media-body">-->
+                            <!--                <span class="name float-left">Cheryl Wheeler</span>-->
+                            <!--                <span class="time float-right">10 minutes ago</span>-->
+                            <!--                <p>Hello, this is an example msg</p>-->
+                            <!--            </span>-->
+                            <!--        </a>-->
+                            <!--        <a class="dropdown-item media" href="#">-->
+                            <!--            <span class="photo media-left"><img alt="avatar" src="images/avatar/4.jpg"></span>-->
+                            <!--            <span class="message media-body">-->
+                            <!--                <span class="name float-left">Rachel Santos</span>-->
+                            <!--                <span class="time float-right">15 minutes ago</span>-->
+                            <!--                <p>Lorem ipsum dolor sit amet, consectetur</p>-->
+                            <!--            </span>-->
+                            <!--        </a>-->
+                            <!--    </div>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <div class='user-name-heading'><h2 class='retailer-user-name'></h2></div>
+                    <div class="right-header-menu">
+                        <div class="user-area dropdown float-right">
+                            <button  class="logout-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <span>Logout  </span><i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </button>
+                        
+                        </div>
+                        <div class="language-select dropdown" id="language-select">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="language" aria-haspopup="true"
+                                aria-expanded="true">
+                                <i class="flag-icon flag-icon-us"></i>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="language">
+                                <div class="dropdown-item">
+                                    <span class="flag-icon flag-icon-fr"></span>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-es"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-us"></i>
+                                </div>
+                                <div class="dropdown-item">
+                                    <i class="flag-icon flag-icon-it"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="breadcrumbs">
+                <div class="col-sm-4">
+                    <div class="page-header float-left">
+                        <div class="page-title">
+                            <h1 class='common-dashboard-heading'>Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="page-header float-right">
+                        <div class="page-title">
+                            <ol class="breadcrumb text-right">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Table</a></li>
+                                <li class="active">Data table</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade active in" id="my-inventry-list" role="tabpanel" aria-labelledby="my-inventry-tab">
+                <div class="container">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="">
+                            
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-info add-new">+ Add New</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table id='inventryTable' class="table table-striped table-bordered pending-approvals-table">
+                        <thead class='gradient'>
+                            <tr>
+                                <th>Inventry Name</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+                </div>
+                
+                <div class="tab-pane fade" id="upcoming-order" role="tabpanel" aria-labelledby="upcoming-order-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='upComingOrdersTable' class="table table-striped table-bordered upcoming-orders-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Inventory Name</th>
+                                        <th>Retailer Name</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="tab-pane fade" id="retailer-order-history" role="tabpanel" aria-labelledby="retailer-order-history-tab">
+
+                    <div class="container">
+                        <div class="table-wrapper">
+                            
+                            <table id='retailerOrderHistory' class="table table-striped table-bordered ongoing-orders-table">
+                                <thead class='gradient'>
+                                    <tr>
+                                        <th>Inventory Name</th>
+                                        <th>Retailer Name</th>
+                                        <th>Quantity</th>
+                                        <th>Total Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <div id="loader" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="loader"></div>
+                </div>
+            </div>
+          </div> 
+          </main>
+          </div>
+          <script src="scripts/jquery-3.5.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="libs/scripts/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/vendor/jquery-2.1.4.min.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script> -->
+    <!-- <script type="text/javascript" src="scripts/index.js"></script> -->
+    
+
+    <script src="assets/js/popper.min.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/plugins.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/main.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/datatables.min.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/dataTables.buttons.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/buttons.bootstrap.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/jszip.min.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/pdfmake.min.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/vfs_fonts.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/buttons.html5.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/buttons.print.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/buttons.colVis.min.js"
+        type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script src="assets/js/lib/data-table/datatables-init.js" type="1a8a4b06bb8bc9ee24afaa7b-text/javascript"></script>
+    <script type="1a8a4b06bb8bc9ee24afaa7b-text/javascript">
+        $(document).ready(function() {
+          /*$('#bootstrap-data-table').DataTable();
+          $('#approved-hospital-table').DataTable();
+          $('#approved-retailer-table').DataTable();
+          $('#approvedRetailerTable').DataTable();
+          $('#ongoingOrdersTable').DataTable();
+          $('#inventryTable').DataTable();
+          $('#upComingOrdersTable').DataTable();
+          $('#hospitalOrderHistory').DataTable();
+          $('#adminOrderHistoryTable').DataTable();
+          $('#retailerOrderHistory').DataTable();
+          $('#viewInventryTable').DataTable();*/
+          
+        } );
+    </script>
+    
+    
+    <script src="assets/js/lib/rocket-loader.min.js"
+        data-cf-settings="1a8a4b06bb8bc9ee24afaa7b-|49" defer=""></script>
+        <script type="text/javascript" src="scripts/dashboard.js"></script>
+</body>
+
+</html>

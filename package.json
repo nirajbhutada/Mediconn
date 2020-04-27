@@ -1,0 +1,21 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cfenv": "1.0.x",
+		"express": "4.15.x",
+		"express-json": "^1.0.0",
+		"express-session": "^1.17.1",
+		"ibm_db": "^2.6.4",
+		"uuid": "^7.0.3"
+	},
+	"repository": {},
+	"engines": {
+		"node": "10.*"
+	}
+}
